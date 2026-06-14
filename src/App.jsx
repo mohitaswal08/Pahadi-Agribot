@@ -1,7 +1,9 @@
 function App() {
   return (
-    <h1>Pahadi AgriBot</h1>
-  );
+    <h1 className="text-4xl font-bold text-green-600">
+      Pahadi AgriBot
+    </h1>
+  )
 }
 
-export default App;
+export default App
