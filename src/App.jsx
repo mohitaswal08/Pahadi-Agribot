@@ -1,29 +1,30 @@
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/navbar";
-import Hero from "./components/Hero";
-import Card from "./components/Card";
 import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Chat from "./pages/Chat";
+import Crops from "./pages/Crops";
+import CropDetail from "./pages/CropDetail";
+
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <div className="grid grid-cols-3 gap-6 p-8">
-  <Card
-    title="Disease Detection"
-    description="Identify common crop diseases."
-  />
 
-  <Card
-    title="Pest Management"
-    description="Get advice on pest control."
-  />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/crops" element={<Crops />} />
+        <Route path="/crop/:name" element={<CropDetail />} />
+      </Routes>
 
-  <Card
-    title="Crop Advisory"
-    description="Receive AI-based crop recommendations."
-  />
-</div>
-<Footer />
+      <Footer />
     </>
   );
 }

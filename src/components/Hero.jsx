@@ -1,17 +1,32 @@
+import { Link } from "react-router-dom";
 function Hero() {
   return (
-    <section className="text-center mt-20">
-      <h1 className="text-5xl font-bold">
-        Pahadi AgriBot
+    <section className="bg-green-50 py-20 px-8 text-center">
+
+      <h1 className="text-5xl font-bold mb-6 text-green-700">
+        AI Farming Assistant for Uttarakhand
       </h1>
 
-      <p className="mt-4 text-xl">
-        AI Powered Crop Advisory for Uttarakhand Farmers
+      <p className="text-xl mb-8 max-w-3xl mx-auto">
+        Get crop advice, pest detection, disease diagnosis,
+        farming techniques, and agricultural recommendations
+        in Hindi and English using AI.
       </p>
 
-      <button className="bg-green-600 text-white px-6 py-3 mt-6 rounded-lg">
-        Start Chat
-      </button>
+      <div className="flex justify-center gap-4">
+        <Link to="/chat">
+  <button className="bg-green-600 text-white px-8 py-4 rounded-lg">
+    Start Chatting
+  </button>
+</Link>
+
+        <Link to="/crops">
+  <button className="border border-green-600 px-8 py-4 rounded-lg">
+    Explore Crops
+  </button>
+</Link>
+      </div>
+
     </section>
   );
 }
