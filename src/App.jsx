@@ -3,10 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 
-import Home from "./pages/home";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import Chat from "./pages/chat";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Chat from "./pages/Chat";
 import Crops from "./pages/Crops";
 import CropDetail from "./pages/CropDetail";
 
