@@ -6,8 +6,10 @@ import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
 import { useState } from "react";
 import Modal from "../components/ui/Modal";
+import Toast from "../components/ui/Toast";
 function Home() {
   const [open, setOpen] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   return (
     <>
       <Hero />
@@ -63,6 +65,28 @@ function Home() {
   </button>
 
 </Modal>
+<div className="flex justify-center py-8">
+
+  <button
+    onClick={() => {
+      setShowToast(true);
+
+      setTimeout(() => {
+        setShowToast(false);
+      }, 3000);
+    }}
+    className="bg-blue-600 text-white px-6 py-3 rounded-lg"
+  >
+    Show Toast
+  </button>
+
+</div>
+{showToast && (
+  <Toast
+    message="Crop analysis completed successfully!"
+    type="success"
+  />
+)}
     </>
   );
 }
